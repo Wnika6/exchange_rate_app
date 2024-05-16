@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ExchangeApp</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet" />
+		<title>Stopwatch</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://kit.fontawesome.com/a734a8665c.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="app-box">
+				<div class="upper-section">
+					<i class="fa-solid fa-money-bill-transfer"></i>
+					<h1 class="title">Przelicznik Walut</h1>
+				</div>
+				<div class="bottom-section">
+					<input type="number" class="input-amount" />
+					<select id="currency-one">
+						<option value="EUR" selected>EUR</option>
+						<option value="USD">USD</option>
+						<option value="CHF">CHF</option>
+					</select>
+					<button class="exchange-btn">PRZELICZ</button>
+				</div>
+				<div class="output-box">
+					<p class="output-amount" value="PLN" id="currency-two"></p>
+				</div>
+				<p class="error"></p>
+				<div class="loader"></div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
