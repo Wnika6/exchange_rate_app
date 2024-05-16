@@ -2,7 +2,7 @@ const currencyOne = document.querySelector('#currency-one')
 const currencyTwo = document.querySelector('#currency-two')
 const amountOne = document.querySelector('.input-amount')
 const amountTwo = document.querySelector('.output-amount')
-const swapBtn = document.querySelector('.exchange-btn')
+const exchangeBtn = document.querySelector('.exchange-btn')
 const error = document.querySelector('.error')
 const loader = document.querySelector('.loader')
 const outputAmount = document.querySelector('.output-amount')
@@ -43,4 +43,4 @@ const exchange = () => {
 		})
 }
 
-swapBtn.addEventListener('click', exchange)
+exchangeBtn.addEventListener('click', exchange)
