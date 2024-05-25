@@ -37,9 +37,8 @@ const performExchange = async () => {
 		if (exchangeRate) {
 			const convertedAmount = (amount * exchangeRate).toFixed(2)
 			outputDisplay.textContent = `to ${convertedAmount} PLN`
-		}
-		if (!response.ok) {
-			throw new Error('Błąd odpowiedzi sieci')
+		} else {
+			errorDisplay.textContent = 'Brak dostępnej stawki wymiany. Prosimy spróbować ponownie później?'
 		}
 	} catch (err) {
 		console.error('Error:', err)
