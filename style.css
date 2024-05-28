@@ -94,6 +94,10 @@ body {
 	overflow-wrap: break-word;
 }
 
+.error {
+	padding: 0.5rem;
+}
+
 .loader {
 	display: none;
 	width: 150px;
