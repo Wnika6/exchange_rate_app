@@ -38,7 +38,7 @@ const performExchange = async () => {
 			const convertedAmount = (amount * exchangeRate).toFixed(2)
 			outputDisplay.textContent = `to ${convertedAmount} PLN`
 		} else {
-			errorDisplay.textContent = 'Brak dostępnej stawki wymiany. Prosimy spróbować ponownie później'
+			errorDisplay.textContent = 'Brak dostępnej stawki wymiany. Prosimy spróbować ponownie później?'
 		}
 	} catch (err) {
 		console.error('Error:', err)
