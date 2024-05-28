@@ -19,12 +19,6 @@ const performExchange = async () => {
 	const currencyCode = currencySelect.value
 	const amount = parseFloat(amountInput.value)
 
-	if (isNaN(amount) || amount <= 0) {
-		errorDisplay.textContent = 'Wpisz liczbę większą niż 0'
-		toggleLoader(false)
-		return
-	}
-
 	if (outputContainer.style.padding !== '0') {
 		outputContainer.style.padding = '20px'
 	}
