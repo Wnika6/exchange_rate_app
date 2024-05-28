@@ -19,6 +19,12 @@ const performExchange = async () => {
 	const currencyCode = currencySelect.value
 	const amount = parseFloat(amountInput.value)
 
+	if (isNaN(amount) || amount <= 0) {
+		errorDisplay.textContent = 'Wpisz liczbę większą niż 0'
+		toggleLoader(false)
+		return
+	}
+
 	if (outputContainer.style.padding !== '0') {
 		outputContainer.style.padding = '20px'
 	}
@@ -32,7 +38,7 @@ const performExchange = async () => {
 			const convertedAmount = (amount * exchangeRate).toFixed(2)
 			outputDisplay.textContent = `to ${convertedAmount} PLN`
 		} else {
-			errorDisplay.textContent = 'Brak dostępnej stawki wymiany. Prosimy spróbować ponownie później?'
+			errorDisplay.textContent = 'Brak dostępnej stawki wymiany. Prosimy spróbować ponownie później'
 		}
 	} catch (err) {
 		console.error('Error:', err)
