@@ -4,14 +4,10 @@ const exchangeButton = document.getElementById('exchange-btn')
 const errorDisplay = document.getElementById('error')
 const loader = document.getElementById('loader')
 const outputDisplay = document.getElementById('currency-two')
-const outputContainer = document.querySelector('.output-box')
+const outputContainer = document.getElementById('output-box')
 
 const toggleLoader = show => {
-	if (show) {
-		loader.style.display = 'block'
-	} else {
-		loader.style.display = 'none'
-	}
+	loader.style.display = show ? 'block' : 'none'
 }
 
 const performExchange = async () => {
@@ -41,7 +37,6 @@ const performExchange = async () => {
 			errorDisplay.textContent = 'Brak dostępnej stawki wymiany. Prosimy spróbować ponownie później?'
 		}
 	} catch (err) {
-		console.error('Error:', err)
 		errorDisplay.textContent = 'Nieudana próba pobrania danych'
 	} finally {
 		toggleLoader(false)
